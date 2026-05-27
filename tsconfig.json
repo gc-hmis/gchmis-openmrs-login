@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "esnext",
+    "target": "es2015",
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "moduleResolution": "bundler",
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "ignoreDeprecations": "6.0",
+    "baseUrl": ".",
+    "paths": {
+      "@openmrs/esm-framework": ["src/type-shims/openmrs-esm-framework.d.ts"],
+      "@openmrs/esm-framework/src/internal": ["src/type-shims/openmrs-esm-framework-internal.d.ts"]
+    },
+    "lib": [
+      "dom",
+      "es5",
+      "scripthost",
+      "es2015",
+      "es2015.promise",
+      "es2016.array.include",
+      "es2018",
+      "es2020",
+      "es2022"
+    ],
+    "noEmit": true
+  },
+  "include": ["src/**/*"]
+}
