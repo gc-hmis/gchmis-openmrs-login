@@ -21,6 +21,7 @@ export const restBaseUrl = '/ws/rest/v1';
 
 export const openmrsFetch = vi.fn();
 export const refetchCurrentUser = vi.fn();
+export const getSessionStore = vi.fn();
 export const clearCurrentUser = vi.fn();
 export const setSessionLocation = vi.fn();
 export const setUserProperties = vi.fn();

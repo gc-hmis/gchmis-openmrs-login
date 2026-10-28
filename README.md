@@ -7,10 +7,11 @@ This package is intentionally named `@gchmis/esm-ui-customizations-app`. It must
 ## What This Owns
 
 - A global no-UI theme loader that imports GCHMIS CSS variables and Carbon button overrides.
+- An authentication guard that redirects unauthenticated `/login/location` visits to `/login`.
 - Future login slot extensions for GCHMIS brand panel, form header, and footer content.
 - GCHMIS-specific frontend configuration examples in the config repository.
 
-It does not own authentication, the stock login route, session handling, location selection, OpenMRS backend APIs, or any stock OpenMRS module route.
+It does not replace authentication, session handling, location selection, OpenMRS backend APIs, or any stock OpenMRS module route.
 
 ## Local Development
 

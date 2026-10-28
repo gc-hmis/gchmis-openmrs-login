@@ -65,6 +65,12 @@ declare module '@openmrs/esm-framework' {
 
   export function openmrsFetch<T = unknown>(url: string, init?: OpenmrsFetchOptions): Promise<FetchResponse<T>>;
   export function refetchCurrentUser(): void;
+  export function getSessionStore(): {
+    getState():
+      | { loaded: false; session: null }
+      | { loaded: true; session: { authenticated?: boolean } };
+    subscribe(listener: () => void): () => void;
+  };
   export function clearCurrentUser(): void;
   export function setSessionLocation(locationUuid?: string, abortController?: AbortController): Promise<unknown>;
   export function setUserProperties(userUuid: string, properties: Record<string, string | undefined>): Promise<unknown>;
